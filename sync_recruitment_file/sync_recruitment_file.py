@@ -10,7 +10,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 
-LIVE_DIR = '/cveda/chroot/QC'
+LIVE_DIR = '/cveda/databank/framework/meta_data/recruitment_files'
 ARCHIVE_DIR = '/cveda/databank/framework/meta_data/_ARCHIVE/recruitment_files'
 
 LIVE_REGEX = re.compile(r'recruitment_file_(\w+).xlsx')
@@ -72,12 +72,19 @@ def main():
                         logging.warning('%s: file is already archived at this date: %s',
                                         path, archive_path)
                     else:
-                        logging.info('%s: archiving file from %02d- into: %s',
-                                      path, archive_path)
+                        logging.info('%s: archiving file from %04d-%02d-%02d into: %s',
+                                      path,
+                                      modification_date.year,
+                                      modification_date.month,
+                                      modification_date.day,
+                                      archive_path)
                         shutil.copyfile(path, archive_path)
                 else:
                     logging.error('%s: file is older than archived file: %s',
                                   path, last_path)
+            else:
+                logging.info('%s: target is identical: %s',
+                             path, last_path)
 
 
 if __name__ == '__main__':
