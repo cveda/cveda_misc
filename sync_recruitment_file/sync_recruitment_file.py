@@ -7,7 +7,6 @@ import datetime
 import filecmp
 import shutil
 import logging
-logging.basicConfig(level=logging.INFO)
 
 
 LIVE_DIR = '/cveda/databank/framework/meta_data/recruitment_files'
