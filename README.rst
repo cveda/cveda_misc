@@ -1,9 +1,9 @@
 =========================================
-Misclelaneous tools for databank operations of the c-VEDA project 
+Miscellaneous tools for databank operations of the c-VEDA project 
 =========================================
 
 ``dump_rql_upload``
-  Dump meta-data from the c-VEDA web upload portal. The resulting JSON file may be forwarded by the QC team.
+  Dump meta-data from the c-VEDA web upload portal. The resulting JSON file may be forwarded to the QC team.
 
 ``exportbin``
   Copy a binary and its libraires to a chroot jail.
