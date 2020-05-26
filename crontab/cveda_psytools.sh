@@ -6,6 +6,6 @@
 # 2. It derives the raw CSV files and makes them available for QC purposes.
 # 3. It pseudonynmizes the derived CSV files.
 
-/cveda/databank/framework/cveda_databank/psytools/cveda_psytools_download.py 2>&1 | ts '%Y-%m-%d %H:%M:%S %Z' >> /var/log/databank/cveda_psytools_download.log
-/cveda/databank/framework/cveda_r/R/cveda_psytools_derive.R 2>&1 | ts '%Y-%m-%d %H:%M:%S %Z' >> /var/log/databank/cveda_psytools_derive.log
-/cveda/databank/framework/cveda_databank/psytools/cveda_psytools_deidentify.py 2>&1 | ts '%Y-%m-%d %H:%M:%S %Z' >> /var/log/databank/cveda_psytools_deidentify.log
+/cveda/databank/framework/git/cveda_databank/psytools/cveda_psytools_download.py 2>&1 | ts '%Y-%m-%d %H:%M:%S %Z' >> /var/log/databank/cveda_psytools_download.log
+/cveda/databank/framework/git/cveda_r/R/cveda_psytools_derive.R 2>&1 | ts '%Y-%m-%d %H:%M:%S %Z' >> /var/log/databank/cveda_psytools_derive.log
+/cveda/databank/framework/git/cveda_databank/psytools/cveda_psytools_deidentify.py 2>&1 | ts '%Y-%m-%d %H:%M:%S %Z' >> /var/log/databank/cveda_psytools_deidentify.log
